@@ -29,5 +29,37 @@ namespace Trello.Test.API.Base
             return result;
         }
 
+        protected static async Task<T> Patch<T>(string baseUri, string endpoint, object command, string token = "")
+        {
+            var request = new DataRequest<T>(baseUri);
+            var result = await request.Patch(endpoint, command);
+
+            return result;
+        }
+
+        protected static async Task<T> Put<T>(string baseUri, string endpoint, object command, string token = "")
+        {
+            var request = new DataRequest<T>(baseUri);
+            var result = await request.Put(endpoint, command, token);
+
+            return result;
+        }
+
+        protected static async Task<T> Post<T>(string baseUri, string endpoint, object command, string token = "")
+        {
+            var request = new DataRequest<T>(baseUri);
+            var result = await request.Post(endpoint, command, token);
+
+            return result;
+        }
+
+        protected static async Task<T> Delete<T>(string baseUri, string endpoint, string token = "")
+        {
+            var request = new DataRequest<T>(baseUri);
+            var result = await request.Delete(endpoint, token);
+
+            return result;
+        }
+
     }
 }
