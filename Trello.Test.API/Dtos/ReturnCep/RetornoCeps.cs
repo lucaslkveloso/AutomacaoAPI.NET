@@ -8,8 +8,8 @@
         public string bairro { get; set; }
         public string localidade { get; set; }
         public string uf { get; set; }
-        public string unidade { get; set; }
         public int ibge { get; set; }
         public string gia { get; set; }
+        public string ddd { get; set; }
     }
 }
