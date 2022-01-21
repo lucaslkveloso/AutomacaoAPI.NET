@@ -5,10 +5,10 @@ using Xunit;
 
 namespace Trello.Test.API
 {
-    public class UnitTest1 : BaseTest
+    public class Tests : BaseTest
     {
         [Fact]
-        public async Task Test1Te()
+        public async Task GetCep()
         {
             var response = await Get<RetornoCeps>(Endpoints.BaseURI, Endpoints.Cep);
             Assert.NotNull(response);
